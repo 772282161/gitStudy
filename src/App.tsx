@@ -15,6 +15,7 @@ function App() {
             <br />
             <p>非受控组件</p>
             <input type="text" />
+            <h2> 我是修改后的组件</h2>
         </>
     )
 }
