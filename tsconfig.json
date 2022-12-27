@@ -1,0 +1,32 @@
+{
+    //"extends":"", //继承配置
+    //"compileOnSave":true, //让IDE在保存文件的时候根据tsconfig.json重新生成文件
+    //想要支持这个特性需要Visual Studio 2015，Typescript1.8.4以上并且安装atom-typescript插件
+    //compilerOptions":{},// 编译选项
+    //"files":[],//指定一个包含相对或绝对文件路径的列表
+    //"include":[],// 指定一个文件glob匹配模式列表
+    //"exclude":[],// 指定一个文件glob匹配模式列表
+    // "references":[],// 一个对象的数组，指明要引用的工程，每个引用的path属性都可以指向到包含tsconfig.json文件的目录，或者直接指向到配置文件本身(名字是任意的)
+    "compilerOptions": {
+        "target": "ESNext",// 指定ECMAScript目标版本"ES3"(默认)
+        "lib": ["DOM","DOM.Iterable","ESNext"],//TS 需要引用的库，即声明文件，es5默认引用dom
+        "allowJs": false,//允许编译器编译JS，JSX文件
+        //"checkJS":false, // 在.js文件中报告错误。与allowJS配合使用
+        "skipLibCheck":  false,//忽略所有的声明文件(*.d.ts)的类型检查
+        "esModuleInterop": true,//允许module.exports=xxx导出，有import from 导入。因为很多老的js库使用了commoonjs的导出方式，并没有导出default属性
+        "allowSyntheticDefaultImports": true,//允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查
+        //"allowUnreachableCode":false,// 不报告执行不到的代码错误
+        //"allowUnusedLabels":false,// 不报告未使用的标签错误
+        //"alwaysStrict":false,//在代码中注入‘use strict’，以严格模式解析并为每个源文件生成"use strict"语句
+        //"charset":"utf8",//输入文件的字符集
+        "strict": true,//启用所有严格类型检查选项。启用--strict相当于启用--noImplicitAny,
+        "forceConsistentCasingInFileNames": true,// 禁止对同一个文件的不一致的引用
+        "module": "ESNext",//设置程序的模块系统，"None","CommonJS","AMD","System","UMD","ES6",...
+        "moduleResolution": "Node",//模块解析策略，ts默认用node的解析策略。即相对的方式导入
+        "resolveJsonModule": true,// 允许导入扩展名为".json"的模块
+        "isolatedModules": true,// 将每个文件作为单独的模块(与"ts.transpileModule"类似)
+        "noEmit": true,//不输出文件，即编译后不会生成任何js文件
+        "jsx": "react",//react18在这里也可以改成react-jsx
+    },
+    "include": ["./src"]
+}
