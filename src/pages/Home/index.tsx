@@ -4,7 +4,12 @@ import Header from '@/pages/Home/Header'
 const Home=()=>{
     return (
         <div>
-            {/* <Header /> */}
+            
+
+
+
+
+            
         </div>
     )
 }
